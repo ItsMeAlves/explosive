@@ -1,0 +1,29 @@
+{
+  "name": "explosive",
+  "version": "1.0.0",
+  "description": "Sensações explosivas com latas de alumínio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItsMeAlves/explosive.git"
+  },
+  "keywords": [
+    "tnt",
+    "lata"
+  ],
+  "author": "Gabriel Alves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ItsMeAlves/explosive/issues"
+  },
+  "homepage": "https://github.com/ItsMeAlves/explosive#readme",
+  "dependencies": {
+    "electron": "^1.4.15",
+    "johnny-five": "^0.10.6",
+    "robotjs": "^0.4.5"
+  }
+}
