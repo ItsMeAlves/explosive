@@ -1,17 +1,13 @@
-const electron = require('electron');
-const url = require('url');
-const path = require('path');
-const {app, BrowserWindow} = electron;
+var app = require('./config/express');
+var http = require('http').Server(app);
+var websockets = require('./config/websockets');
+var routes = require('./app/routes');
+var robot = require('./app/robot');
+var io = websockets(http);
 
-app.on('ready', () => {
-	var mainWindow = new BrowserWindow({
-		width: 800,
-		height: 600
-	});
+routes(app, io);
+robot(io);
 
-	mainWindow.loadURL(url.format({
-		pathname: path.join(__dirname, 'static', 'index.html'),
-		slashes: true,
-		protocol: 'file:'
-	}));
+http.listen(app.get('PORT'), () => {
+    console.log('listening on', app.get('PORT'));
 });

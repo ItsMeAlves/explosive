@@ -22,8 +22,9 @@
   },
   "homepage": "https://github.com/ItsMeAlves/explosive#readme",
   "dependencies": {
-    "electron": "^1.4.15",
+    "express": "^4.14.1",
     "johnny-five": "^0.10.6",
-    "robotjs": "^0.4.5"
+    "pug": "^2.0.0-beta10",
+    "socket.io": "^1.7.2"
   }
 }
