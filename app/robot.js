@@ -22,5 +22,15 @@ module.exports = function(io, port) {
 
             io.emit('notesPlayed', pins);
         });
+
+        io.use((socket, next) => {
+            socket.on('unload', () => {
+                port.close(() => {
+                    console.log('port closed before unloading');
+                });
+            });
+
+            next();
+        });
     });
 }

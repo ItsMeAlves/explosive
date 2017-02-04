@@ -17,3 +17,7 @@ for(var i = 0; i < numberOfOscillators; i++) {
 $(document).ready(function() {
     $('.modal').modal();
 });
+
+window.onbeforeunload = function(e) {
+    socket.emit('unload');
+}
