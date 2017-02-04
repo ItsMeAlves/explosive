@@ -6,7 +6,15 @@ var robot = require('./app/robot');
 var io = websockets(http);
 
 routes(app, io);
-robot(io);
+
+io.use((socket, next) => {
+    socket.on('selectedPort', value => {
+        robot(io, value);
+    });
+
+    next();
+});
+
 
 http.listen(app.get('PORT'), () => {
     console.log('listening on', app.get('PORT'));

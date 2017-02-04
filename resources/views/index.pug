@@ -3,7 +3,37 @@ html
     head
         meta(charset="utf-8")
         title Explosive
+        link(href="images/fire.jpg" rel="icon")
+        link(href="css/style.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css")
+
     body
-        h1 Olha só como se tira um nó!
+        div.container
+            header
+                h1#title Espere um pouco...
+                h5#subtitle Você deve primeiro escolher o device
+            div#availableDevices.modal
+                div.modal-content
+                    h4 Dispositivos disponíveis
+                    p Selecione na lista abaixo o dispositivo que deseja utilizar
+                    div#buttons
+            div.firebox.box1.grayscale
+                img.fire(src="images/fire.jpg")
+                p Primeira nota
+            div.firebox.box2.grayscale
+                img.fire(src="images/fire.jpg")
+                p Segunda nota
+            div.firebox.box3.grayscale
+                img.fire(src="images/fire.jpg")
+                p Terceira nota
+            div.firebox.box4.grayscale
+                img.fire(src="images/fire.jpg")
+                p Quarta nota
+        footer
+            p #CPBR10   
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js")
         script(src="socket.io/socket.io.js")
-        script(src="js/script.js")
+        script(src="js/init.js")
+        script(src="js/listing.js")
+        script(src="js/play.js")

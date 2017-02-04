@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Merriweather');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Merriweather", serif;
+    border-top: 2px solid #F44336;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arsenal", sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 5em;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #F44336;
+    color: white;
+    border-top: 1px solid gray;
+}
+
+.firebox {
+    width: 25%;
+    display: inline-block;
+}
+
+.fire {
+    width: 100%;
+}
+
+.firebox.grayscale .fire {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
